@@ -1,4 +1,4 @@
-var url = "https://restcountries.eu/rest/v1/name/";
+var url = "https://restcountries.eu/rest/v2/name/";
 var countriesList = $("#countries");
 
 $("#search").click(searchCountries);
@@ -16,6 +16,25 @@ function searchCountries(){
 function showCountriesList(resp){
     countriesList.empty();
     resp.forEach(function(item){
-        $("<li>").text(item.name + " , Capital: " + item.capital + " , Region: " + item.region).appendTo(countriesList);
+        var $text = $("<p>").text(item.name + " , Capital: " + item.capital + " , Region: " + item.region);
+        var $flag = $("<img>").attr({src : item.flag});
+        $("<li>").append($flag).append($text).appendTo(countriesList);
     });
 }
+
+// function searchCountries(){                                                                      //VANILLA JS
+//     var countryName = document.getElementById("country-name").value;
+//     if(!countryName.length) countryName = "Poland";
+//     var xhr = new XMLHttpRequest();
+//     xhr.open("GET", url + countryName);
+//     xhr.addEventListener("load", function(){
+//         var response = JSON.parse(xhr.response);
+//         for (i = 0; i < response.length; i ++){
+//             var p = document.createElement("p");
+//             var txt = document.createTextNode(response[i].name + " , Capital " + response[i].capital);
+//             p.appendChild(txt);
+//             document.getElementById("countries").appendChild(p);
+//         };
+//     });
+//     xhr.send();
+// }
