@@ -16,7 +16,7 @@ function searchCountries(){
 function showCountriesList(resp){
     countriesList.empty();
     resp.forEach(function(item){
-        var $text = $("<p>").text(item.name + " , Capital: " + item.capital + " , Region: " + item.region);
+        var $text = $("<p>").text(item.name + " , Capital: " + item.capital + " , Region: " + item.subregion);
         var $flag = $("<img>").attr({src : item.flag});
         $("<li>").append($flag).append($text).appendTo(countriesList);
     });
