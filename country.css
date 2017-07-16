@@ -1,16 +1,76 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-* {font-family: "Open Sans"}
-img {
-    height: 50px;
-    width: auto;
-    border: 1px solid black;
-    margin-right: 20px;
-}
+* {
+    font-family: "Open Sans";
+    box-sizing: border-box;
+    }
 p {
     display: inline-block;
+    }
+strong {
+    display: inline-block;
+    margin-right: 10px;
 }
 li {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 10px;
+    margin: 60px 0;
+    }
+.search {
+    text-align: center;
+}
+.list-of-countries {
+    height: 450px;
+    overflow: auto;
+}
+.container {
+    margin: 0 auto;
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap
+}
+.container .flag {
+    flex: 100%;
+    text-align: center;
+}
+.container .flag img {
+    height: 150px;
+    width: auto;
+    display:block;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 0px black;
+}
+.container .name {
+    flex: 100%;
+    text-align: center;
+}
+.container .capital {
+    flex: 50%;
+    border: 1px solid black;
+    padding: 0 20px;
+}
+.container .currency {
+    flex: 50%;
+    border: 1px solid black;
+    padding: 0 20px;
+}
+.container .region {
+    flex: 50%;
+    border: 1px solid black;
+    padding: 0 20px;
+}
+.container .phone {
+    flex: 50%;
+    border: 1px solid black;
+    padding: 0 20px;
+}
+.container .population {
+    flex: 50%;
+    border: 1px solid black;
+    padding: 0 20px;
+}
+.container .domain {
+    flex: 50%;
+    border: 1px solid black;
+    padding: 0 20px;
 }
